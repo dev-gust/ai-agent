@@ -1,13 +1,16 @@
+import argparse
 import os
 
 from dotenv import load_dotenv
 from google import genai
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description="AI Code Assistant")
+    parser.add_argument("user_prompt", type=str, help="Prompt to send to Gemini")
+    args = parser.parse_args()
+
     load_dotenv()
-
     api_key = os.environ.get("GEMINI_API_KEY")
-
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY environment variable not set")
 
@@ -16,7 +19,7 @@ def main() -> None:
     try:
         response = client.models.generate_content(
             model="gemini-2.5-flash",
-            contents="How to get a random point in an area in Godot using GDScript? Use one paragraph maximum.",
+            contents=args.user_prompt,
         )
         if not response.usage_metadata:
             raise RuntimeError("Gemini API response appears to be malformed")
