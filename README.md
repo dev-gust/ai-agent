@@ -1,11 +1,11 @@
-# Gemini API Practice
+# OpenRouter API Practice
 
-A small Python project for testing integration with the Google Gemini API.
+A small Python project for testing integration with the OpenRouter API.
 
 ## Requirements
 
 - Python 3.x
-- A Gemini API key
+- A OpenRouter API key
 - Project dependencies installed
 
 ## Setup
@@ -13,7 +13,7 @@ A small Python project for testing integration with the Google Gemini API.
 Create a `.env` file in the project root:
 
 ```env
-GEMINI_API_KEY='your_api_key_here'
+OPENROUTER_API_KEY='your_api_key_here'
 ```
 
 ## Run
