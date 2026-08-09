@@ -1,5 +1,6 @@
 from functions.get_file_content import get_file_content
 
+
 def test() -> None:
     result = get_file_content("calculator", "lorem.txt")
     print("Result for 'lorem.txt':")

@@ -46,7 +46,7 @@ def run_python_file(
         if args:
             command.extend(args)
 
-        result = subprocess.run(command, cwd=working_dir_abs, capture_output=True, text=True, timeout=30)
+        result = subprocess.run(command, cwd=working_dir_abs, capture_output=True, check=False, text=True, timeout=30)
 
         output: list[str] = []
         if result.returncode != 0:

@@ -5,7 +5,7 @@ A small Python project for testing integration with the OpenRouter API.
 ## Requirements
 
 - Python 3.x
-- A OpenRouter API key
+- An OpenRouter API key
 - Project dependencies installed
 
 ## Setup
